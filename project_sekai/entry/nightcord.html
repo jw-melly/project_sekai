@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nightcord.css">
+    <link rel="icon" href="source/icon.png" type="image/x-icon">
+    <title>Project Sekai</title>
+</head>
+<body>
+    <a href="main.html" class="home-button">Home</a>
+
+    <div class="glitch-container" id="glitch-container"></div>
+
+    <div class="overlay" id="overlay">
+        <div class="text-box">
+            <p>Do you want to explore the <span>"NIGHTCORD AT 25:00?"</span></p>
+            <div class="button-group">
+                <a href="nightcord2.html" class="btn yes">YES</a>
+                <a href="main.html" class="btn no">NO</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const glitchContainer = document.getElementById('glitch-container');
+        const overlay = document.getElementById('overlay');
+
+        for (let i = 0; i < 80; i++) {
+            const text = document.createElement('div');
+            text.className = 'glitch-text';
+            text.innerText = "Nightcord at 25:00";
+            text.style.top = `${Math.random() * 100}%`;
+            text.style.left = `${Math.random() * 100}%`;
+            text.style.animationDelay = `${Math.random() * 0.5}s`;
+            glitchContainer.appendChild(text);
+        }
+
+        glitchContainer.addEventListener('click', () => {
+            glitchContainer.innerHTML = ''; // 글리치 제거
+            overlay.style.visibility = 'visible';
+            overlay.style.opacity = '1';
+        });
+    const yesButton = document.querySelector('.btn.yes');
+    yesButton.addEventListener('click', (e) => {
+        e.preventDefault(); // 링크 이동 방지
+        alert('Error: You cannot access to the NIGHTCORD AT 25:00');
+    });
+
+        </script>
+</body>
+</html>

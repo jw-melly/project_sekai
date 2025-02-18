@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Sekai</title>
+  <link rel="stylesheet" href="wonderland.css">   
+  <link rel="icon" href="source/icon.png" type="image/x-icon">
+</head>
+<body>
+    <a href="main.html" class="home-button">Home</a>
+
+    <div class="containerleft">
+        <div class="textbox" id="left1" data-popup="" >Wonderlands</div>
+        <div class="textbox" id="left2" data-popup="Tsukasa's SEKAI, the Wonderland SEKAI, is a theme park world filled with fantastical encounters, like singing flowers and walking stuffed animals — forgotten creations made by a young Tsukasa for his sister, Saki, a long time ago. Onstage, troupe leader KAITO and his helper Hatsune Miku put on elaborate shows to help the group discover their true feelings.
+
+        There are many sentient plushies that can be found throughout the SEKAI. In particular, one of the stuffed animals is a bunny plushie from Saki's childhood. There is also a pair of cat and dog stuffed animals who often bicker but usually make up in the end. In the It's On! Wonder Halloween! event, the argument between the cat and dog seems to mirror the conflict with Rui and Tsukasa in real life.
+        
+        In Keep It Steady, Let’s Aim for the Star!, Wonderlands x Showtime and the VIRTUAL SINGERS discover a new part of the SEKAI, which consists of a colorful port, fitted with a ship. Next to it lies a fairytale-esque town where some of the stuffed animals live, with hot air balloons, a roller coaster and a volcano that spurts out pink clouds. Just like in the rest of the SEKAI, sentient plushies inhabit this part of the SEKAI, some with their own personal conflicts that mirror conflicts that Emu, Nene, and Rui had experienced in the past. In one of the flower pots, their sprout grows.">Sekai</div>
+        <div class="textbox" id="left4" data-popup="Tsukasa Tenma has always wanted to make his sickly sister, Saki, happy, but as time passed, he couldn't remember why he wanted to be a star in the first place. He was hired to work part-time at the theme park Phoenix Wonderland, but the once-popular Wonder Stage theater he is assigned to has been deserted, unable to attract any visitors for years. There, he met Emu Otori, who desired to restore the theater to its former glory. Joined by Nene Kusanagi and Rui Kamishiro, they formed a musical theater troupe as they entered the Wonderland SEKAI and met a clown-like Miku, hoping to revive the theater's glory and make people happy.
+        " >About</div>
+      </div>
+    
+      <div class="center" data-popup="">Wonderlands x Showtime</div>
+    
+      <div class="containerright">
+        <div class="textbox" id="right1" data-popup="Tenma Tsukasa, Otori Emu, Kamishiro Rui, Kusanagi Nene" >Members</div>
+        <div class="textbox" id="right2" data-popup="2020/09/30 Buriki no Dance
+        2020/09/30 Bouken no Sho ga Kiemashita!
+        2020/10/04 Dappou Rock
+        2020/10/07 Dance Robot Dance
+        2020/10/13 Miracle Paint
+        2021/01/03 Chururira Chururira Daddadda!
+        2021/02/19 Positive☆Dance Time
+        2021/04/05 Oki ni Mesu mama
+        2021/05/17 KING
+        2021/10/06 Telecaster B-Boy
+        2021/12/28 Fixer
+        2022/02/24 Nonsense Bungaku
+        2022/03/15 Yī Èr Fanclub
+        2022/05/16 Rimokon
+        2022/05/30 Kami no Manimani
+        2022/06/13 Goodbye Sengen
+        2022/07/11 Alien Alien
+        2022/08/08 Odore Orchestra
+        2022/10/06 Ego Rock
+        2022/11/14 Love ka?
+        2022/12/30 Netoge Haijin Sprechchor
+        2023/02/15 1925
+        2023/04/17 Okochama Sensou
+        2023/06/12 Aa, Subarashiki Nyansei
+        2023/07/12 Taiyoukei Disco
+        2023/10/08 Sukina Koto Dake de Ii Desu
+        2023/10/25 Wagamama Hime
+        2024/01/01 Kyoufuu All Back
+        2024/02/22 Kosho Yashiki Satsujin Jiken
+        2024/03/25 1000-nen Ikiteru
+        2024/05/07 Ochame Kinou
+        2024/06/10 Kyou mo Harebare
+        2024/08/26 QUEEN
+        2024/09/02 Chigau!!!
+        2024/10/07 Tensei Ringo
+        2024/12/29 Konton Boogie
+        2025/01/14 Chuubyou Gekihatsu Boy" data-type="songs">Songs</div>
+        <div class="textbox" id="right3" data-popup="An eccentric musical theater troupe formed to 'put a smile on people's faces to make the world happy'. Their SEKAI, the Wonderland SEKAI, consists of an amusement park filled with fantastical encounters like singing flowers and walking stuffed animals. 
+        They are initially supported by Hatsune Miku, who takes on 
+        the form of a cat-like jester, and KAITO, who takes on the form 
+        of a suited actor. Their image color is Pop Yellow, and they represent 
+        happiness">Story</div>
+      </div>
+    
+      <div id="popup" class="popup"></div>
+    
+      <script>
+       const textboxes = document.querySelectorAll('.textbox, .center');
+      const popup = document.getElementById('popup');
+
+      textboxes.forEach(box => {
+        box.addEventListener('click', () => {
+          popup.textContent = box.getAttribute('data-popup');
+          if (box.getAttribute('data-type') === 'songs') {
+            popup.classList.add('songs-popup');
+          } else {
+            popup.classList.remove('songs-popup');
+          }
+          popup.style.display = 'block';
+        });
+      });
+
+      popup.addEventListener('click', () => {
+        popup.style.display = 'none';
+        popup.classList.remove('songs-popup');
+      });
+      </script>
+</body>
+</html>

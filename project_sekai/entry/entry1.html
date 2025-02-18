@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="source/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="entry1.css">
+    <title>Project Sekai</title>
+</head>
+<body>
+    <a href="main.html" class="home-button">Home</a>
+
+    <div class="loading-text" onclick="redirectPage()">Loading</div>
+
+    <script>
+        const textElement = document.querySelector(".loading-text");
+        let dots = "";
+        let increasing = true;
+
+        function animateLoading() {
+            if (increasing) {
+                dots += ".";
+                if (dots.length === 3) increasing = false;
+            } else {
+                dots = dots.slice(0, -1);
+                if (dots.length === 0) increasing = true;
+            }
+            textElement.textContent = "Loading" + dots;
+        }
+
+        setInterval(animateLoading, 500);
+
+        function redirectPage() {
+            window.location.href = "entry2.html";
+        }
+    </script>
+
+</body>
+</html>

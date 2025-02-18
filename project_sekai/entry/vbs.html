@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="vbs.css">
+  <title>Project Sekai</title>
+</head>
+<body>
+    <a href="main.html" class="home-button">Home</a>
+    
+  <div class="text-box stay">Vivid Bad Squad</div>
+  <div class="text-box slide-down">Vivid Bad Squad</div>
+  <div class="text-box left-to-right">Azusawa Kohane</div>
+  <div class="text-box right-to-left">Shiraishi An</div>
+  <div class="text-box left-to-right">Shinonome Akito</div>
+  <div class="text-box right-to-left">Aoyagi Toya</div>
+
+  <div class="popup-buttons">
+    <button class="popup-button" onclick="showPopup('popup1')">Story</button>
+    <button class="popup-button" onclick="showPopup('popup2')">Sekai</button>
+    <button class="popup-button" onclick="showPopup('popup3')">Song</button>
+  </div>
+
+  <div id="popup1" class="popup-text">Kohane Azusawa has been deeply passionate about street music ever since she stumbled upon a singing session by An Shiraishi. Captivated by her singing, Kohane joined An to become a street musician as well and later teamed up with fellow musicians Akito Shinonome and Toya Aoyagi. She entered the Street SEKAI and met a hip-hop-styled Miku, and together they began the quest to surpass a legend.</div>
+  <div id="popup2" class="popup-text"><p>The Street SEKAI is a multiple-alleyway area with walls of graffiti and posters, some of which are old flyers for RAD WEEKEND. As referenced in an area conversation, there are multiple secret alleys to enter and exit from. One of the streets is known to have good acoustics which Hatsune Miku frequently sings at. Going down into the alleyway leads to a cafe MEIKO operates, named Crase Cafe.</p>
+
+    <p>Crase Cafe is located at the end of what seems to be three to four alleyways, one of which being the usual location where the members enter their SEKAI. Outside of the cafe, there are two wooden round tables with red chairs set up. Inside, there is a corner island with several red stool bar chairs. There are two rows of cabinets, the lower row being completely visible with different cups, jars, and bottles. There is a pale grey couch at the back of the cafe with two pillows on the side, one pale blue and one pastel orange. A chalkboard menu and bookshelf hang above it. There are four tables inside with multiple different styled chairs. The main light sources are the windows, though, there are assorted overhead lamps and lightbulbs.</p>
+    
+    <p>Oddly enough, the cafe has two different types of doors. In the game's SEKAI world, the cafe uses sliding collapsible glass doors, which are open and free to walk through at any time. In the Main Story and Card Story episodes, the door changes to a French full glass panel door with long or paneled windows, the characters having to manually open the door to enter. The reason why the doors are designed like this is unknown; however, it could be due to making the story seem more realistic with pull doors instead of being left wide open. Also, the sliding doors allow players to see the inside of Crase Cafe in the game.</p>
+    
+    The SEKAI can be decorated with a cafe signboard reading "Weekend Garage," an old DJing set, Ken's CDs, a pair of microphones, a cafe handbell, Len's headphones, a coffee grinder, RAD WEEKEND flyers, Vivid Street graffiti, and music speakers.
+    
+    In BREAK DOWN THE WALL, a new part of the SEKAI is discovered by Vivid BAD SQUAD and the VIRTUAL SINGERS, which consists of an square in a town with various alleyways and buildings of different colors and sizes. Grafitti and flyers cover both the walls of the buildings. Walls akin to the strength of castle walls block several alleys' ends, representing going beyond Vivid BAD SQUAD's dream of surpassing RAD WEEKEND, meaning they will break down once the group surpass it. In some of the pavement in the north, a single sprout grows.</div>
+  <div id="popup3" class="popup-text">2020/09/30 Rettou Joutou <br>
+    2020/09/30 Doctor=Funk Beat<br>
+    2020/09/30 Fragile<br>
+    2020/10/03 Just Be Friends<br>
+    2020/10/09 Yobanashi Deceive<br>
+    2021/01/02 ECHO<br>
+    2021/02/15 Drop pop candy<br>
+    2021/03/15 Ifuudoudou<br>
+    2021/05/03 Yuurei Tokyo<br>
+    2021/06/30 Traffic Jam<br>
+    2021/08/23 Children Record<br>
+    2021/10/08 Akuma no Odorikata<br>
+    2021/11/10 Alter Ego<br>
+    2022/01/03 Garando<br>
+    2022/02/04 Odo<br>
+    2022/03/22 Ame to Petra<br>
+    2022/04/18 PaⅢ.SENSATION<br>
+    2022/06/06 Aun no Beats<br>
+    2022/08/22 YY<br>
+    2022/10/10 DAYBREAK FRONTLINE<br>
+    2022/11/01 Teikoku Shoujo<br>
+    2023/01/05 Pheles<br>
+    2023/03/13 Egoist<br>
+    2023/04/21 Taemanaku Aiiro<br>
+    2023/05/19 SHANTI<br>
+    2023/07/24 Nounai Kakumei Girl<br>
+    2023/10/06 Koi wa Sensou<br>
+    2023/11/06 Shunran<br>
+    2023/12/30 Kinmokusei<br>
+    2024/01/29 Marshall Maximizer<br>
+    2024/02/01 E? Aa, Sou.<br>
+    2024/04/15 Yoidore Shirazu<br>
+    2024/08/13 WAVE<br>
+    2024/10/05 Call Boy<br>
+    2024/12/23 Hana Obore<br>
+    2025/01/01 CH4NGE<br>
+    2025/02/21 Rumor<br>
+    </div>
+
+  <script>
+    function showPopup(id) {
+      const popup = document.getElementById(id);
+      popup.style.display = 'block';
+      popup.style.animation = 'popupTextUp 1s ease forwards';
+    }
+  </script>
+</body>
+</html>

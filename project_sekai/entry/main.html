@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="main.css">
+  <link rel="icon" href="source/icon.png" type="image/x-icon">
+  <title>Project Sekai</title>
+</head>
+<body>
+  <div class="button-group">
+    <a href="leo_need.html"><button>Leo/Need</button></a>
+    <a href="wonderland.html"><button>Wonderlands<br>x<br>Showtime</button></a>
+    <a href="nightcord.html"><button>Nightcord at 25:00</button></a>
+      <a href="vbs.html"><button>Vivid Bad Squad</button></a>
+  </div>
+  <h2>PROJECT</h2>
+  <div class="terminal" id="terminal"></div>
+  <button class="hidden-button" onclick="window.location.href='entry2.html'">Start</button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const terminal = document.getElementById('terminal');
+      const text = "SEKAI";
+      let index = 0;
+
+      function type() {
+        if (index < text.length) {
+          terminal.innerHTML += text.charAt(index);
+          index++;
+          setTimeout(type, 150);
+        } else {
+          terminal.innerHTML += '<span class="cursor">|</span>';
+          setTimeout(() => {
+            document.querySelector('.hidden-button').classList.add('show');
+          }, 500);
+        }
+      }
+
+      type();
+    });
+  </script>
+</body>
+
+</html>

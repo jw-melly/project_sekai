@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'guardener';
+    src: url('font/guardener.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'anta';
+    src: url('font/anta.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'cybrpnuk';
+    src: url('font/cybrpnuk.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'maxlock';
+    src: url('font/maxlock.ttf') format('truetype');
+  }
+
+
+.home-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: 'anta';
+    font-size: 18px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.home-button:hover {
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+}
+
+body {
+    background-color: black;
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            font-family: 'maxlock';
+            color: white;
+
+        }
+        .loading-text {
+            font-size: 5rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff ;
+
+        }

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="source/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="entry2.css">
+  <title>Project Sekai</title>
+ 
+</head>
+<body>
+
+  <div class="terminal" id="terminal"></div>
+
+  <script>
+  const terminal = document.getElementById('terminal');
+
+const textLines = [
+  'Initializing Hatsune Miku: Colorful Stage...',
+      'Loading vibrant virtual worlds...',
+      'Connecting to Sekai...',
+      'Access granted.',
+      'Welcome to Hatsune Miku: Colorful Stage!',
+      'Experience the rhythm game featuring your favorite VOCALOIDs and original characters.',
+      'Dive into unique stories from groups like Leo/Need, More More Jump!,',
+      'Vivid BAD SQUAD, Wonderlands x Showtime, and Nightcord at 25:00.',
+      'Customize your band, play live performances, and unlock stunning outfits.',
+      'Collaborate with players worldwide and climb the leaderboards.',
+      'Enjoy breathtaking 3D visuals and rhythm gameplay with iconic songs like "Melt",',
+      '"Tell Your World", and exclusive new tracks!',
+      'Are you ready to join Miku and friends in an unforgettable musical journey?',
+      'Tap, hold, and swipe your way to rhythm game mastery!',
+      'Explore the world of Sekai and let the music take you away...',
+      'Loading complete. Press Start to begin your adventure!',
+];
+
+let lineIndex = 0;
+let charIndex = 0;
+
+function typeLine() {
+  if (lineIndex < textLines.length) {
+    if (charIndex < textLines[lineIndex].length) {
+      terminal.innerHTML += textLines[lineIndex][charIndex];
+      charIndex++;
+      setTimeout(typeLine, 25); // 타이핑 속도 수정
+    } else {
+      terminal.innerHTML += '<br />';
+      charIndex = 0;
+      lineIndex++;
+      setTimeout(typeLine, 500);
+    }
+  } else {
+    terminal.innerHTML += '<br /><span class="cursor">|</span>';
+  }
+}
+
+typeLine(); 
+
+
+const groups = [
+  'Leo/Need',
+  'More More Jump!',
+  'Vivid BAD SQUAD',
+  'Wonderlands x Showtime',
+  'Nightcord at 25:00'
+];
+
+function createGroupAnimation() {
+  const group = document.createElement('div');
+  group.className = 'group-name';
+  group.textContent = groups[Math.floor(Math.random() * groups.length)];
+  group.style.top = `${Math.random() * 80 + 10}%`;
+  group.style.setProperty('--randomY', `${Math.random() * 50 - 25}%`);
+  group.style.right = '20%';
+  document.body.appendChild(group);
+  setTimeout(() => group.remove(), 2000);
+}
+
+function startGroupAnimations() {
+  setInterval(createGroupAnimation, 500);
+}
+
+function typeLineWithAnimation() {
+  if (lineIndex < textLines.length) {
+    if (charIndex < textLines[lineIndex].length) {
+      terminal.innerHTML += textLines[lineIndex][charIndex];
+      charIndex++;
+      setTimeout(typeLineWithAnimation, 25);
+    } else {
+      terminal.innerHTML += '<br />';
+      charIndex = 0;
+      lineIndex++;
+      setTimeout(typeLineWithAnimation, 500);
+    }
+  } else {
+    terminal.innerHTML += '<br /><span class="cursor">|</span>';
+    startGroupAnimations(); // 애니메이션 시작
+  }
+}
+typeLineWithAnimation();
+</script>
+</body>
+</html>
